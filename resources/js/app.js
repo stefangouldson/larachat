@@ -1,7 +1,8 @@
 require('./bootstrap');
+window.Vue = require('vue');
 
-Vue.component('chat-messages', require('./components/ChatMessage.vue'));
-Vue.component('chat-form', require('./components/ChatForm.vue'));
+Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
+Vue.component('chat-form', require('./components/ChatForm.vue').default);
 
 const app = new Vue({
     el: '#app',
@@ -12,6 +13,7 @@ const app = new Vue({
 
     created() {
         this.fetchMessages();
+
         Echo.private('chat')
         .listen('MessageSent', (e) => {
         this.messages.push({
