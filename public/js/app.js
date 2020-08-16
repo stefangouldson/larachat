@@ -38037,7 +38037,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: '550cd57bc7094528a95a',
+  key: "550cd57bc7094528a95a",
   cluster: 'eu',
   forceTLS: false
 });
