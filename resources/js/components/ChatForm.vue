@@ -1,11 +1,11 @@
 <template>
-    <div class="form-row align-items-center">
-        <div class="col-10">
+    <div class="form-row align-items-center p-2">
+        <div class="col-md-11 col-sm-12">
         <input id="btn-input" type="text" name="message" class="form-control input-sm" placeholder="Type your message here..." v-model="newMessage" @keyup.enter="sendMessage">
         </div>
 
-        <div class="col-2">
-            <button class="btn btn-primary btn-sm ml-2" id="btn-chat" @click="sendMessage">
+        <div class="col-md-1 col-sm-12 p-2">
+            <button class="btn btn-primary btn-sm float-right" id="btn-chat" @click="sendMessage">
                 Send
             </button>
         </div>

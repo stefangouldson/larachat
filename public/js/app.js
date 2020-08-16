@@ -25690,8 +25690,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "form-row align-items-center" }, [
-    _c("div", { staticClass: "col-10" }, [
+  return _c("div", { staticClass: "form-row align-items-center p-2" }, [
+    _c("div", { staticClass: "col-md-11 col-sm-12" }, [
       _c("input", {
         directives: [
           {
@@ -25729,11 +25729,11 @@ var render = function() {
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "col-2" }, [
+    _c("div", { staticClass: "col-md-1 col-sm-12 p-2" }, [
       _c(
         "button",
         {
-          staticClass: "btn btn-primary btn-sm ml-2",
+          staticClass: "btn btn-primary btn-sm float-right",
           attrs: { id: "btn-chat" },
           on: { click: _vm.sendMessage }
         },
