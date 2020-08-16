@@ -1920,6 +1920,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['user'],
   data: function data() {
@@ -25688,48 +25690,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "input-group" }, [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.newMessage,
-          expression: "newMessage"
-        }
-      ],
-      staticClass: "form-control input-sm",
-      attrs: {
-        id: "btn-input",
-        type: "text",
-        name: "message",
-        placeholder: "Type your message here..."
-      },
-      domProps: { value: _vm.newMessage },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
+  return _c("div", { staticClass: "form-row align-items-center" }, [
+    _c("div", { staticClass: "col-10" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.newMessage,
+            expression: "newMessage"
           }
-          return _vm.sendMessage($event)
+        ],
+        staticClass: "form-control input-sm",
+        attrs: {
+          id: "btn-input",
+          type: "text",
+          name: "message",
+          placeholder: "Type your message here..."
         },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
+        domProps: { value: _vm.newMessage },
+        on: {
+          keyup: function($event) {
+            if (
+              !$event.type.indexOf("key") &&
+              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+            ) {
+              return null
+            }
+            return _vm.sendMessage($event)
+          },
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.newMessage = $event.target.value
           }
-          _vm.newMessage = $event.target.value
         }
-      }
-    }),
+      })
+    ]),
     _vm._v(" "),
-    _c("span", { staticClass: "input-group-btn" }, [
+    _c("div", { staticClass: "col-2" }, [
       _c(
         "button",
         {
-          staticClass: "btn btn-primary btn-sm",
+          staticClass: "btn btn-primary btn-sm ml-2",
           attrs: { id: "btn-chat" },
           on: { click: _vm.sendMessage }
         },
@@ -38028,13 +38032,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "550cd57bc7094528a95a",
-  cluster: "eu",
-  forceTLS: true
+  key: '550cd57bc7094528a95a',
+  cluster: 'eu',
+  forceTLS: false
 });
 
 /***/ }),

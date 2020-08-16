@@ -1,12 +1,14 @@
 <template>
-    <div class="input-group">
+    <div class="form-row align-items-center">
+        <div class="col-10">
         <input id="btn-input" type="text" name="message" class="form-control input-sm" placeholder="Type your message here..." v-model="newMessage" @keyup.enter="sendMessage">
+        </div>
 
-        <span class="input-group-btn">
-            <button class="btn btn-primary btn-sm" id="btn-chat" @click="sendMessage">
+        <div class="col-2">
+            <button class="btn btn-primary btn-sm ml-2" id="btn-chat" @click="sendMessage">
                 Send
             </button>
-        </span>
+        </div>
     </div>
 </template>
 

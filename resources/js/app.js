@@ -16,11 +16,11 @@ const app = new Vue({
 
         Echo.private('chat')
         .listen('MessageSent', (e) => {
-        this.messages.push({
-        message: e.message.message,
-        user: e.user
-    });
-  });
+          this.messages.push({
+            message: e.message.message,
+            user: e.user
+          });
+        });
     },
 
 
